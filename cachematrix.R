@@ -8,7 +8,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function will compute the inverse of a given matrix returned by "makecacheMatrix" above.
+## If the inverse has not been solved then it stores it in a cache for future and faster retrieval
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
