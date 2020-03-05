@@ -6,10 +6,22 @@
 makeCacheMatrix <- function(input_matrix = matrix()) {
   # define sub functions
   m <- NULL
-  set <- function(set_matrix_value) {
+  setmatrix <- function(set_matrix_value) {
     input_matrix <<- set_matrix_value #store in cache
     m <<- NULL                        #store in cache
   }
+  
+  getmatrix <- function() input_matrix
+    
+  setinverse <- function(inverse) m <<- inverse #store in cache
+  getinverse <- function() m
+    
+  #define the parameters of the list
+  list(set = setmatrix,
+       get = getmatrix,
+       setinverse = setinverse,
+       getinverse = getinverse)
+}
 
 ## This function will compute the inverse of a given matrix returned by "makecacheMatrix" above.
 ## If the inverse has not been solved then it stores it in a cache for future and faster retrieval
