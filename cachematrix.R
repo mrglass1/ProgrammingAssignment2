@@ -35,4 +35,11 @@ cacheSolve <- function(cachesolve_input, ...) {
         
     return(temp)}
   
+  #solve the inverse using the solve() function
+  data <- cachesolve_input$get()
+  temp <- solve(data, ...) # use function solve() as recommended in notes
+  cachesolve_input$setinverse(temp)
+    
+  #return the final value of the inversed matrix, cached or non-cached
+  temp
 }
