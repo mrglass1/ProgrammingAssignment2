@@ -27,5 +27,12 @@ makeCacheMatrix <- function(input_matrix = matrix()) {
 ## If the inverse has not been solved then it stores it in a cache for future and faster retrieval
 
 cacheSolve <- function(cachesolve_input, ...) {
-        ## Return a matrix that is the inverse of 'x'
+  temp <- cachesolve_input$getinverse()
+    
+  #check if the cache exist
+  if(!is.null(temp)) {
+    message("retrieving the cached matrix...")
+        
+    return(temp)}
+  
 }
