@@ -26,6 +26,6 @@ makeCacheMatrix <- function(input_matrix = matrix()) {
 ## This function will compute the inverse of a given matrix returned by "makecacheMatrix" above.
 ## If the inverse has not been solved then it stores it in a cache for future and faster retrieval
 
-cacheSolve <- function(x, ...) {
+cacheSolve <- function(cachesolve_input, ...) {
         ## Return a matrix that is the inverse of 'x'
 }
